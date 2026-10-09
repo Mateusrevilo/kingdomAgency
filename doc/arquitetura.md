@@ -481,7 +481,9 @@ de schema. Ela adiciona RPCs para provisionar uma igreja e o primeiro Sênior,
 configurar Secundários (incluindo pacotes e exceções), cadastrar membros com
 atribuição inicial e impor a capacidade dentro de transações. Também impede
 remover ou desativar o último Sênior ativo. Ainda não implementa
-os módulos de conteúdo/financeiro nem integração com a aplicação Next.js.
+os módulos de conteúdo/financeiro. O dashboard Next.js já integra operações
+de transferência e remoção para o Administrador Sênior; o provisionamento,
+configuração dos Secundários e cadastro de membros continuam sem interface.
 A migration `20261009182000_member_assignment_management.sql` foi aplicada ao
 Supabase e o lint remoto não encontrou erros. Ela adiciona RPCs do Sênior para
 transferir ou remover atribuições, mantendo o histórico e registrando auditoria.
@@ -501,7 +503,8 @@ transferir ou remover atribuições, mantendo o histórico e registrando auditor
    membros — criadas, validadas em PostgreSQL temporário e aplicadas ao
    Supabase.
 8. RPCs de transferência/remoção de atribuições — migration validada e aplicada
-   ao Supabase. Integração Next.js pendente.
+   ao Supabase; integração básica para o Sênior concluída. Integração dos
+   demais RPCs e módulos permanece pendente.
 9. Conteúdo público com publicação explícita.
 10. Portal pessoal do membro e autoatendimento permitido.
 11. Gestão completa de membros, atribuições e capacidade.

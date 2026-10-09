@@ -1,4 +1,5 @@
 import { logout } from "../actions";
+import Link from "next/link";
 
 export default function DashboardPage() {
   return (
@@ -26,9 +27,15 @@ export default function DashboardPage() {
         <section className="mt-10 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
           <h2 className="text-xl font-semibold">Sessão autenticada</h2>
           <p className="mt-2 leading-7 text-slate-600">
-            Sua sessão foi verificada no servidor. Os módulos e as permissões
-            serão adicionados em etapas posteriores.
+            Sua sessão foi verificada no servidor. A gestão de atribuições de
+            membros está disponível para Administradores Sêniores.
           </p>
+          <Link
+            className="mt-5 inline-flex rounded-lg bg-emerald-800 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-emerald-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-800"
+            href="/dashboard/membros"
+          >
+            Gerenciar membros
+          </Link>
         </section>
       </div>
     </main>

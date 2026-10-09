@@ -70,9 +70,10 @@ dashboard verifica os claims no servidor.
 
 O banco já contém papéis, pacotes de permissões, RLS inicial e RPCs para
 provisionamento, configuração de Secundários, cadastro de membros com limite
-transacional e transferência/remoção auditada de atribuições. A aplicação
-ainda não integra essas operações nem as permissões por módulo; a autenticação
-sozinha não concede acesso a operações administrativas.
+transacional e transferência/remoção auditada de atribuições. O dashboard
+permite ao Administrador Sênior transferir e remover atribuições; as demais
+operações e as permissões por módulo ainda não estão integradas à aplicação.
+A autenticação sozinha não concede acesso a operações administrativas.
 
 ## Estado atual
 
