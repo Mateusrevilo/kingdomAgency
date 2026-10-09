@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Gestão da Igreja",
+  title: "Kingdom | Gestão da Igreja",
   description: "Sistema de gerenciamento para igrejas.",
 };
 

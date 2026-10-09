@@ -39,6 +39,13 @@ export default function Home() {
         >
           Acessar minha conta
         </Link>
+
+        <Link
+          className="mt-6 ml-4 inline-flex rounded-lg border border-slate-300 px-5 py-3 font-medium text-slate-700 transition-colors hover:border-emerald-800 hover:text-emerald-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-800"
+          href="/planos"
+        >
+          Conheça os planos
+        </Link>
       </div>
     </main>
   );

@@ -284,8 +284,9 @@ Supabase. Ela adiciona RPCs para criar igreja com o primeiro Administrador
 Sênior, configurar Secundários (limites, pacotes e exceções de permissão) e
 cadastrar membros com atribuição inicial em transação. A capacidade é
 serializada com bloqueio da linha de limite; a operação falha sem inserir dados
-quando o limite é atingido. Também protege o último Sênior ativo. Ainda faltam
-integrar os RPCs à aplicação. A migration
+quando o limite é atingido. Também protege o último Sênior ativo. O dashboard
+Next.js integra a transferência e remoção de atribuições para o Administrador
+Sênior; os demais RPCs ainda não estão integrados à aplicação. A migration
 `20261009182000_member_assignment_management.sql` foi validada em PostgreSQL
 temporário e aplicada ao Supabase; o lint remoto não encontrou erros. Ela
 adiciona RPCs do Sênior para transferir e remover atribuições, preservando
@@ -305,8 +306,8 @@ histórico e registrando auditoria.
 7. RPCs transacionais iniciais — migration criada, validada em PostgreSQL
    temporário, aplicada ao Supabase e lint remoto sem erros.
 8. RPCs de transferência/remoção de atribuições — migration aplicada ao
-   Supabase e lint remoto sem erros. Integrar os RPCs à aplicação em etapa
-   posterior.
+   Supabase, lint remoto sem erros e integração básica no dashboard concluída.
+   Integração do provisionamento e do cadastro de membros permanece pendente.
 9. Módulos de conteúdo e financeiro.
 10. Área pública e publicação controlada de cultos, agenda, grupos e mídias.
 11. Área do membro e dados pessoais próprios.
@@ -323,3 +324,9 @@ perfis, permissões, atribuições e políticas de leitura está no banco remoto
 A próxima migration, com RPCs transacionais para criação e configuração,
 existe apenas localmente até sua aplicação. Os módulos de domínio e a
 integração dessas operações com a interface ainda não estão implementados.
+
+## 12. Página pública de planos
+
+A apresentação comercial pública do Kingdom está disponível em `/planos`.
+Sua estrutura, navegação, conteúdo e limitações estão descritos em
+[Página de planos](./pagina-de-planos.md).
